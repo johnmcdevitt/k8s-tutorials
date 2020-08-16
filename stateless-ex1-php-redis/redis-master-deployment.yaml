@@ -4,26 +4,26 @@ metadata:
   name: redis-master
   labels:
     app: redis
-  spec:
-    selector:
-      matchLabels:
-        app: redis
-        role: master
-        tier: backend
-      replicas: 1
-      template:
-        metadata:
-          labels:
-            app: redis
-            role: master
-            tier: backend
-        spec:
-          containers:
-          - name: master
-            image: k8s.gcr.io/redis:e2e
-            resources:
-              requests:
-                cpu: 100m
-                memory: 100Mi
-            ports:
-            - containerPort: 6379
+spec:
+  selector:
+    matchLabels:
+      app: redis
+      role: master
+      tier: backend
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          app: redis
+          role: master
+          tier: backend
+      spec:
+        containers:
+        - name: master
+          image: k8s.gcr.io/redis:e2e
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+          - containerPort: 6379
