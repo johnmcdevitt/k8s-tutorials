@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: influxdb
+  labels:
+    app: influxdb
+    role: master
+    tier: backend
+spec:
+  ports:
+  - port: 8086
+    targetPort: 8086
+  selector:
+    app: influxdb
+    role: master
+    tier: backend
