@@ -35,4 +35,4 @@ spec:
           # uncomment the line below:
           # value: env
         ports:
-        - containerPort: 31800
+        - containerPort: 3000
