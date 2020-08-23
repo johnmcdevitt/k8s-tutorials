@@ -15,6 +15,7 @@ spec:
     metadata:
       labels:
         app: icinga2
+        role: master
         tier: frontend
     spec:
       containers:
@@ -37,4 +38,3 @@ spec:
           # value: env
         ports:
         - containerPort: 5665
-        ICINGA_MASTER=1
