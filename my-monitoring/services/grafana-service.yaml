@@ -12,8 +12,9 @@ spec:
   # an external load-balanced IP for the frontend service.
   # type: LoadBalancer
   ports:
-  - port: 31800
-    targetPort: 31800
+    - protocol: TCP
+      port: 80
+      targetPort: 31800
   selector:
     app: grafana
     tier: frontend
